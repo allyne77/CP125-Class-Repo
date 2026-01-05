@@ -10,7 +10,8 @@ def is_balance_sufficient(amount, balance):
     Checks if the balance is enough for the withdrawal.
     """
     if  balance >= amount:
-        return 0
+        return True
+    return False
         
 def process_withdrawal(amount, balance):
     """
@@ -19,5 +20,8 @@ def process_withdrawal(amount, balance):
     Returns "Invalid Amount" if not a multiple of 10.
     Returns "Insufficient Funds" if balance is too low.
     """
-    # TODO: Implement this function
-    pass
+  
+   
+
+
+    
