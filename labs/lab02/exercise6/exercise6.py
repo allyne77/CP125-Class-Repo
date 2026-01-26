@@ -1,4 +1,17 @@
 def is_leap_year(year):
+    if (year % 4 == 0):
+        if (year % 100 == 0):
+            if (year % 400 == 0):
+                return True
+            else:
+                return False
+        else:
+            return True
+    else:
+        return False
+    
+    
+
     """
     Determines if a year is a leap year according to the Gregorian calendar.
     
@@ -13,6 +26,4 @@ def is_leap_year(year):
     Returns:
     True if leap year, False otherwise
     """
-    # TODO: Implement the leap year logic
-    # Hint: Check divisibility in the correct order
-    pass
+

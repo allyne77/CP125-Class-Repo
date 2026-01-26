@@ -27,8 +27,8 @@ def count_passing(scores, passing_mark):
 
 def get_class_summary(scores, passing_mark):
     average = calculate_average(scores)
-    passing = count_passing(passing_mark, scores)
-    failed = len(scores) - passing
+    failed = count_passing(scores, passing_mark)
+    passing = len(scores) - failed
     return (average, passing, failed)
 
 

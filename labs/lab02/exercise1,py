@@ -1,0 +1,26 @@
+# Rectangle 1
+length1 = 5
+width1 = 3
+area1 = length1 * width1
+print(f"Rectangle 1: {area1}")
+
+# Rectangle 2
+length2 = 10
+width2 = 4
+area2 = length2 * width2
+print(f"Rectangle 2: {area2}")
+
+# Rectangle 3
+length3 = 7
+width3 = 2
+area3 = length3 * width3
+print(f"Rectangle 3: {area3}")
+
+def calculate_rectangle_area(length, width):  # Both change, so both are parameters
+    area = length * width  # Formula stays the same
+    return area
+
+# Now call with different values
+print(f"Rectangle 1: {calculate_rectangle_area(5, 3)}")
+print(f"Rectangle 2: {calculate_rectangle_area(10, 4)}")
+print(f"Rectangle 3: {calculate_rectangle_area(7, 2)}")
