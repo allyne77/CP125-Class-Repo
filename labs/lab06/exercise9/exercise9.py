@@ -23,4 +23,12 @@ def find_qualified_students(student_records, required_courses):
         if common == completed:
             qualified.append(student_id)
     
-    return qualified
+    return sorted(qualified)
+
+required = {"A", "B"}
+students = [
+    ("Z9", {"A", "B", "C"}),
+    ("A1", {"A", "B", "C"}),
+    ("M5", {"A", "B", "C"})
+]
+find_qualified_students(students, required)

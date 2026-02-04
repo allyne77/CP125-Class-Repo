@@ -16,9 +16,9 @@ def analyze_scores(score_records):
     all_scores = []
     
     for student_id, score in score_records:
-        all_scores.append(student_id)
+        all_scores.append(score)
     
-    highest = min(all_scores)
+    highest = max(all_scores)
     
     average = sum(all_scores) / len(score_records)
     
@@ -28,3 +28,6 @@ def analyze_scores(score_records):
             above_average_count += 1
     
     return (highest, average, above_average_count)
+
+score = [("S1", 85.5), ("S2", 90.5), ("S3", 75.5)]
+analyze_scores(score)
