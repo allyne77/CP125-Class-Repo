@@ -2,6 +2,7 @@
 # Write your code below:
 
 def filter_passing_scores(input_file, output_file):
+    
     """
     Filter students with passing scores (>= 80) and write to output file.
 
@@ -12,8 +13,7 @@ def filter_passing_scores(input_file, output_file):
     Returns:
         int: count of passing students
     """
-    # TODO: Implement this function
-    pass
+    
 
 
 # Test your code here

@@ -2,6 +2,17 @@
 # Write your code below:
 
 def calculate_order_total(products_file, order_file, output_file):
+
+    f1 = open(products_file, "r")
+    f2 = open(order_file, "r")
+    f3 = open(output_file, "w")
+
+
+# Test your code here
+result = calculate_order_total("labs/lab08/exercise3/data/products.csv", "labs/lab08/exercise3/data/order.csv", "labs/lab08/exercise3/data/total.csv")
+print(f"Grand total: ${result:.2f}")
+
+
     """
     Calculate total cost for each product in order.
 
@@ -13,10 +24,3 @@ def calculate_order_total(products_file, order_file, output_file):
     Returns:
         float: grand total of all orders
     """
-    # TODO: Implement this function
-    pass
-
-
-# Test your code here
-result = calculate_order_total("data/products.csv", "data/order.csv", "data/total.csv")
-print(f"Grand total: ${result:.2f}")
