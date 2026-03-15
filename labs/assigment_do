@@ -1,0 +1,78 @@
+# Create an empty dictionary to store item 
+inventory = {}
+
+# Function to display the user interface options
+def show_menu():
+    print("\n--- COOPMART Inventory Menu ---")
+    print("1. Add item")
+    print("2. Delete item")
+    print("3. Search item")
+    print("4. Show inventory")
+    print("5. Exit")
+
+# Function to handle adding new items or updating existing ones
+def add_item():
+    name = input("Enter item name: ")
+    quantity = int(input("Enter quantity: "))
+
+    if quantity < 0:
+        print("Error: Quantity cannot be negative.")
+        return
+
+    # Check if the item is already in the dictionary
+    if name in inventory:
+        inventory[name] += quantity
+        print(f"Item '{name}' already exists. Quantity updated to {inventory[name]}.")
+    else:
+        inventory[name] = quantity
+        print("Item added successfully.")
+
+# Function to remove an item from the dictionary
+def delete_item():
+    name = input("Enter item name to delete: ")
+
+    if name not in inventory:
+        print(f"Error: Item '{name}' not found.")
+    else:
+        del inventory[name]
+        print("Item deleted successfully.")
+
+# Function to look up a specific item's quantity
+def search_item():
+    name = input("Enter item name to search: ")
+
+    if name not in inventory:
+        print(f"Error: Item '{name}' not found.")
+    else:
+        print(f"Item: {name}, Quantity: {inventory[name]}")
+
+# Function to display all items currently stored
+def show_inventory():
+    if not inventory:
+        print("Inventory is empty.")
+    else:
+        print("\nCurrent Inventory:")
+        
+        for item, qty in inventory.items():
+            print(f"{item}: {qty}")
+
+
+# To run the code until user choose exit(5)
+while True:
+    show_menu()
+    choice = input("Enter your choice(1-5): ")
+
+    # Input for the menu choice
+    if choice < "1" or choice > "5":
+        print("Error: Invalid choice. Please enter a number between 1 and 5.")
+    elif choice == '1':
+        add_item()
+    elif choice == '2':
+        delete_item()
+    elif choice == '3':
+        search_item()
+    elif choice == '4':
+        show_inventory()
+    elif choice == '5':
+        print("Goodbye! Thank you for using COOPMART Inventory System.")
+        break

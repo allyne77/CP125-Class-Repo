@@ -1,0 +1,21 @@
+#allyne lab-test-1.py , kelas C02
+
+def process_numbers():
+    numbers = []
+
+# Get 5 numbers from user
+    for i in range(1,6):
+        num = int(input(f"Enter number {i}: "))
+        numbers.append(num)
+
+    numbers.sort()# Sort numbers in ascending order
+    total_sum = sum(numbers)# Calculate sum of numbers
+    largest_num = max(numbers)# Find largest number
+
+    return numbers, total_sum, largest_num# Return the results
+
+sort_num, total_sum, largest_num = process_numbers()# Call the function
+
+print("Numbers in ascending order:", sort_num)
+print("Sum of all numbers:", total_sum)
+print("Largest number:", largest_num)
