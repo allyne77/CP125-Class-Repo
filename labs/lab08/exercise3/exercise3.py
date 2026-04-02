@@ -17,7 +17,7 @@ def calculate_order_total(products_file, order_file, output_file):
     products.close()
     order.close()
     total.close()
-    return grand_total
+    return 
 
 result = calculate_order_total("labs/lab08/exercise3/data/products.csv", "labs/lab08/exercise3/data/order.csv", "labs/lab08/exercise3/data/total.csv")
 print(f"Grand total: ${result:.2f}")
