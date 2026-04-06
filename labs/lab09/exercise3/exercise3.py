@@ -12,7 +12,8 @@ def show_math_trend(filename):
 
     plt.show()
 
-    return len(df)
+   
     
-
-
+count = show_math_trend("labs/lab09/data/students.csv")
+# Chart window appears showing Math scores
+print(count)  # 25
